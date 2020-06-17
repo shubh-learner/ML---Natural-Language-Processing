@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Review Analyser</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='fire_favicon.ico') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <link href="https://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     
+    </head>
+
+    <body>
+
+        <!-- Website Title -->
+    	<div class="container">
+            <h2 class='container-heading'><span class="heading_font">Restaurant Review's Sentiment Analyser</span></h2>
+            <div class='description'>
+    			<p>A Machine Learning Web App, Built with Flask, Deployed using Heroku.</p>
+    		</div>
+    	</div>
+
+        <!-- Text Area -->
+    	<div class="ml-container">
+    		<form action="{{ url_for('predict') }}" method="POST">
+        		<textarea class='message-box' name="message" rows="15" cols="75" placeholder="Enter Your Review Here..."></textarea><br/>
+        		<input type="submit" class="my-cta-button" value="Predict">
+        	</form>
+    	</div>
+
+        <!-- Footer -->
+       	<div class='footer'>
+            <div class="contact">
+                <a target="_blank" href="https://facebook.com/arya.shubh" class="fa fa-facebook"></a>
+                <a target="_blank" href="https://github.comt" class="fa fa-github"></a>
+            </div>
+            <p class='footer-description'>Action is the foundational key to all success. ❤️ Shubh Arya.</p>
+        </div>
+
+    </body>
+</html>

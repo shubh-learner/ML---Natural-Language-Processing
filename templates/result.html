@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+        <title>Restaurant Review - Sentiment Analyser</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='fire_favicon.ico') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+		<link href="https://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Piedra&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     
+	</head>
+
+	<body>
+
+		<!-- Website Title -->
+    	<div class="container">
+            <h2 class='container-heading'><span class="heading_font">Restaurant Review's Sentiment Analyser</span></h2>
+            <div class='description'>
+    			<p>A Machine Learning Web App, Built with Flask, Deployed using Heroku.</p>
+    		</div>
+    	</div>
+
+		<!-- Result -->
+		<div class="results">
+			{% if prediction==1 %}
+				<h1>Prediction: <span class='safe'>Great!! This is a POSITIVE Review.</span></h1>
+				<img class="gif" width="300" height="300" src="{{ url_for('static', filename='snoopy_happy.gif') }}" alt="Positive Review">
+			{% elif prediction==0 %}
+				<h1>Prediction: <span class='danger'>Oops!! This is a NEGATIVE Review.</span></h1>
+				<img class="gif" width="300" height="300" src="{{ url_for('static', filename='snoopy_sad.gif') }}" alt="Negative Review">
+			{% endif %}
+		</div>
+
+		<!-- Footer -->
+       	<div class='footer'>
+            <div class="contact">
+                <a target="_blank" href="https://facebook.com/arya.shubh" class="fa fa-facebook"></a>
+                <a target="_blank" href="https://github.com" class="fa fa-github"></a>
+            </div>
+            <p class='footer-description'>Action is the foundational key to all success. ❤️ Shubh Arya.</p>
+        </div>
+
+	</body>
+</html>

@@ -1,5 +1,5 @@
 # Reviews Sentiments Analyzer Web App
-* This is the application developed with Flask.
+* This application is developed on the Flask web application Framework.
 * It impliments the Machine learning algorithm - Bag of words.
 * The dataset used in the app is taken from Kaggle.
 
